@@ -33,19 +33,28 @@ window.addEventListener("pointermove",e=>{
   glow.animate({left:`${e.clientX}px`,top:`${e.clientY}px`},{duration:500,fill:"forwards"});
 });
 
-
-// Coffee spill transition: the first scroll after the hero fills the page with espresso.
+// Coffee cup -> coffee spill scroll choreography.
+// The first ~85% of one viewport scroll is the animation timeline.
 const root = document.documentElement;
-const hero = document.querySelector(".hero");
+const heroSection = document.querySelector(".hero");
 
-function updateCoffeeSpill(){
-  if(!hero) return;
-  const start = Math.max(0, hero.offsetTop + hero.offsetHeight - window.innerHeight * 0.9);
-  const distance = Math.max(520, window.innerHeight * 0.85);
-  const progress = Math.max(0, Math.min(1, (window.scrollY - start) / distance));
+function updateCoffeeScene(){
+  if(!heroSection) return;
+
+  const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+  const timeline = Math.max(window.innerHeight * 0.95, 620);
+
+  // Animation begins just before the hero finishes, so the transition
+  // feels attached to the hero rather than appearing after a blank gap.
+  const start = Math.max(0, heroBottom - window.innerHeight * 0.72);
+  const progress = Math.max(
+    0,
+    Math.min(1, (window.scrollY - start) / timeline)
+  );
+
   root.style.setProperty("--coffee-progress", progress.toFixed(3));
 }
 
-window.addEventListener("scroll", updateCoffeeSpill, {passive:true});
-window.addEventListener("resize", updateCoffeeSpill);
-updateCoffeeSpill();
+window.addEventListener("scroll", updateCoffeeScene, {passive:true});
+window.addEventListener("resize", updateCoffeeScene);
+updateCoffeeScene();

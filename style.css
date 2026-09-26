@@ -1,112 +1,271 @@
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;color:#201a16;background:#f6f2ea;overflow-x:hidden}a{text-decoration:none;color:inherit}.nav{position:fixed;z-index:20;top:0;left:0;width:100%;height:82px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;color:#fff;transition:.35s}.nav.scrolled{background:rgba(30,23,18,.94);backdrop-filter:blur(16px);height:70px}.brand{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:2px}.brand-mark{display:grid;place-items:center;width:36px;height:36px;border:1px solid currentColor;border-radius:50%;font-family:"Playfair Display";font-size:21px}.nav-links{display:flex;align-items:center;gap:32px;font-size:13px;font-weight:600}.nav-links a:not(.nav-cta){opacity:.9;transition:.2s}.nav-links a:hover{opacity:1}.nav-cta{padding:12px 20px;border-radius:30px;background:#f4c56a;color:#241a12}.menu-toggle{display:none;background:none;border:0;color:white}.hero{height:100vh;min-height:680px;position:relative;color:#fff;display:flex;align-items:center;padding:0 9vw}.hero-image,.hero-overlay,.visit-bg,.visit-overlay{position:absolute;inset:0}.hero-image{background:url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=2200&q=90") center/cover}.hero-overlay{background:linear-gradient(90deg,rgba(20,13,9,.86),rgba(20,13,9,.35),rgba(20,13,9,.2))}.hero-content{position:relative;z-index:2;max-width:760px;padding-top:40px}.eyebrow{font-size:11px;letter-spacing:3px;font-weight:700;margin-bottom:22px;color:#eec36c}.eyebrow.dark{color:#94703b}.hero h1,.visit h2{font:600 clamp(55px,8vw,105px)/.92 "Playfair Display",serif;letter-spacing:-4px}.hero h1 em,.visit h2 em,h2 em{font-style:italic;color:#efc56c}.hero-copy{max-width:480px;margin:28px 0 34px;font-size:16px;line-height:1.75;color:#eee7df}.hero-actions,.visit-buttons{display:flex;align-items:center;gap:26px}.btn{display:inline-flex;align-items:center;gap:22px;padding:16px 22px;border-radius:40px;font-weight:700;font-size:13px;transition:.3s}.btn:hover{transform:translateY(-3px)}.btn-light{background:#fff;color:#231b15}.btn-outline{border:1px solid rgba(255,255,255,.5);color:#fff}.text-link{font-size:13px;font-weight:700}.text-link span{margin-left:10px;color:#efc56c}.scroll-cue{position:absolute;bottom:35px;left:9vw;font-size:9px;letter-spacing:3px;display:flex;align-items:center;gap:12px}.scroll-cue span{height:35px;width:1px;background:#fff;animation:scrollline 1.6s infinite}.hero-badge{position:absolute;right:7vw;bottom:8vh;width:150px;height:150px;border:1px solid rgba(255,255,255,.5);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:rgba(0,0,0,.14);backdrop-filter:blur(4px)}.hero-badge span{font-size:25px;margin-bottom:7px}.hero-badge b{font-size:12px}.hero-badge small{font-size:9px;opacity:.7;margin-top:3px}.marquee{overflow:hidden;background:#c89442;color:#21170f;padding:13px 0;white-space:nowrap;font-size:12px;letter-spacing:3px;font-weight:800}.marquee div{display:inline-block;animation:marquee 28s linear infinite}.marquee i{font-style:normal;margin:0 28px}.section{padding:125px 8vw}.section-head{display:flex;justify-content:space-between;align-items:end;gap:60px;margin-bottom:55px}.section-head h2,.menu-title h2{font:600 clamp(45px,5vw,72px)/.95 "Playfair Display";letter-spacing:-2px}.section-head>p{max-width:370px;line-height:1.8;color:#756b63;font-size:14px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.feature-card{background:#e9e1d4;overflow:hidden}.feature-card img{width:100%;height:350px;object-fit:cover;transition:transform .7s}.feature-card:hover img{transform:scale(1.06)}.feature-card>div{padding:24px}.feature-card span{font-size:10px;color:#987b4c}.feature-card h3{font:500 29px "Playfair Display";margin:7px 0}.feature-card p{font-size:13px;color:#756b63;line-height:1.6;min-height:42px}.feature-card b{display:block;margin-top:18px;font-size:14px}.menu-section{background:#211a15;color:#fff}.menu-inner{padding-top:110px;padding-bottom:120px}.menu-title{display:flex;justify-content:space-between;align-items:end}.tabs{display:flex;gap:8px;margin:50px 0 25px;flex-wrap:wrap}.tabs button{border:1px solid #51463e;background:none;color:#c9c0b8;padding:11px 19px;border-radius:30px;font:600 12px "DM Sans";cursor:pointer;transition:.25s}.tabs button.active,.tabs button:hover{background:#efc56c;color:#211a15;border-color:#efc56c}.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid #403831}.menu-item{display:flex;align-items:center;gap:20px;padding:24px 10px 24px 0;border-bottom:1px solid #403831;transition:.3s}.menu-item:hover{padding-left:10px;background:rgba(255,255,255,.025)}.menu-item.hidden{display:none}.menu-thumb{width:100px;height:82px;flex:none;overflow:hidden}.menu-thumb img{width:100%;height:100%;object-fit:cover}.menu-item h3{font:500 22px "Playfair Display";margin-bottom:5px}.menu-item p{font-size:12px;color:#9c938c}.menu-item strong{display:block;margin-top:10px;color:#efc56c;font-size:13px}.experience{display:grid;grid-template-columns:1.1fr .9fr;gap:9vw;align-items:center;background:#eee7dc}.experience-photo{height:650px;overflow:hidden}.experience-photo img{width:100%;height:100%;object-fit:cover}.experience-copy p:not(.eyebrow){color:#756b63;line-height:1.9;max-width:420px;margin:25px 0}.experience-copy h2{font:600 clamp(48px,5vw,75px)/.95 "Playfair Display";letter-spacing:-2px}.dark-link{font-weight:700;font-size:13px;border-bottom:1px solid #9b7945;padding-bottom:7px}.gallery{background:#f6f2ea}.gallery-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:260px 260px;gap:15px}.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.gallery-grid img:hover{transform:scale(1.025)}.g1{grid-row:span 2}.g4{grid-column:2 / span 2}.visit{height:720px;position:relative;color:#fff;display:grid;place-items:center;text-align:center}.visit-bg{background:url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=2200&q=90") center/cover}.visit-overlay{background:rgba(24,16,11,.68)}.visit-content{position:relative;z-index:2}.visit-content p:not(.eyebrow){margin:25px 0 32px;color:#ddd}.visit-buttons{justify-content:center}.footer-brand{display:flex;align-items:center;gap:12px}.footer-brand .brand-mark{color:#efc56c}.footer-brand b{font-size:13px;letter-spacing:2px}footer{background:#1d1713;color:#ddd;padding:65px 8vw 35px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:25px;align-items:center}footer p{font-size:12px;color:#958c84}.footer-links{display:flex;justify-content:center;gap:24px;font-size:12px}.footer-links a:hover{color:#efc56c}footer small{grid-column:1/-1;color:#716961;border-top:1px solid #342b25;padding-top:25px;margin-top:20px}.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}.cursor-glow{position:fixed;width:180px;height:180px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(239,197,108,.09),transparent 65%);transform:translate(-50%,-50%);z-index:100;mix-blend-mode:screen}@keyframes marquee{to{transform:translateX(-50%)}}@keyframes scrollline{50%{opacity:.2;transform:translateY(8px)}}
 /* =========================================================
-   COFFEE SPILL SCROLL TRANSITION
-   The liquid grows with the user's scroll position.
+   BRANDED COFFEE CUP -> COFFEE SPILL SCROLL TRANSITION
    ========================================================= */
 :root{
   --coffee-progress:0;
   --espresso:#2b1810;
-  --espresso-2:#3b2115;
+  --coffee:#4a2717;
+  --coffee-dark:#2a160d;
+  --cream:#f6f2ea;
 }
 
 .coffee-transition{
   position:relative;
   height:0;
-  z-index:8;
+  z-index:12;
   pointer-events:none;
 }
 
-.coffee-blob{
+/* The hero ends and the cup appears at the center of the viewport. */
+.cup-scene{
+  position:fixed;
+  z-index:20;
+  left:50%;
+  top:50%;
+  width:250px;
+  height:390px;
+  transform:
+    translate(-50%,-50%)
+    translateY(calc(var(--coffee-progress) * 7vh))
+    rotate(calc(var(--coffee-progress) * 7deg))
+    scale(calc(1 - var(--coffee-progress) * .12));
+  opacity:calc(1 - var(--coffee-progress) * .9);
+  transform-origin:center center;
+  filter:drop-shadow(0 25px 28px rgba(36,18,8,.22));
+  transition:opacity .08s linear,transform .08s linear;
+}
+
+/* Cup shadow */
+.cup-shadow{
   position:absolute;
   left:50%;
-  bottom:-18px;
-  width:145%;
-  height:calc(120px + (var(--coffee-progress) * 1000px));
-  transform:translateX(-50%) translateY(calc(55% - (var(--coffee-progress) * 52%)));
-  transform-origin:center bottom;
-  background:
-    radial-gradient(circle at 38% 5%,rgba(255,220,166,.13),transparent 16%),
-    linear-gradient(180deg,#5b321e 0%,#3b2115 35%,#2b1810 100%);
-  border-radius:48% 52% 0 0 / 12% 12% 0 0;
-  box-shadow:
-    0 -12px 35px rgba(37,18,8,.28),
-    inset 0 12px 25px rgba(255,205,142,.08);
-  will-change:height,transform,border-radius;
-  transition:height .08s linear,transform .08s linear,border-radius .08s linear;
-}
-
-.coffee-blob::before{
-  content:"";
-  position:absolute;
-  top:-30px;
-  left:-4%;
-  width:108%;
-  height:80px;
-  background:#4a2919;
+  bottom:3px;
+  width:190px;
+  height:28px;
+  transform:translateX(-50%);
+  background:rgba(38,18,8,.24);
+  filter:blur(14px);
   border-radius:50%;
-  filter:blur(.2px);
-  box-shadow:
-    90px 18px 0 -12px #5b321e,
-    -120px 10px 0 -18px #3b2115,
-    230px 12px 0 -22px #6a3b22;
 }
 
-.coffee-blob::after{
-  content:"";
+/* Premium takeaway cup shape */
+.takeaway-cup{
   position:absolute;
-  top:-7px;
+  left:50%;
+  top:20px;
+  width:205px;
+  height:315px;
+  transform:translateX(-50%);
+}
+
+.cup-body{
+  position:absolute;
   left:0;
-  width:100%;
-  height:28px;
-  border-radius:50%;
-  background:linear-gradient(90deg,transparent,rgba(255,224,180,.16),transparent);
-  filter:blur(7px);
+  top:42px;
+  width:205px;
+  height:255px;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.08),transparent 14%,transparent 72%,rgba(0,0,0,.08)),
+    linear-gradient(180deg,#fffdf8,#f3eee5);
+  clip-path:polygon(4% 0,96% 0,88% 100%,12% 100%);
+  box-shadow:inset 0 0 0 1px rgba(80,60,40,.08);
+  overflow:hidden;
 }
 
-.coffee-drop{
+.cup-body::before{
+  content:"";
   position:absolute;
-  display:block;
-  width:16px;
-  height:28px;
-  background:#4a2919;
-  border-radius:60% 60% 65% 65%;
-  opacity:calc(.15 + var(--coffee-progress) * .85);
-  box-shadow:0 4px 9px rgba(31,13,5,.25);
+  inset:0;
+  background:linear-gradient(110deg,rgba(255,255,255,.8),transparent 30%,rgba(255,255,255,.15) 70%,transparent);
+  opacity:.7;
 }
 
-.cd1{left:18%;top:-45px;transform:rotate(13deg) scale(calc(.4 + var(--coffee-progress) * .8))}
-.cd2{left:32%;top:-62px;transform:rotate(-9deg) scale(calc(.25 + var(--coffee-progress) * .65))}
-.cd3{right:27%;top:-52px;transform:rotate(11deg) scale(calc(.3 + var(--coffee-progress) * .9))}
-.cd4{right:13%;top:-35px;transform:rotate(-15deg) scale(calc(.25 + var(--coffee-progress) * .7))}
+.cup-ripple{
+  position:absolute;
+  left:50%;
+  top:34px;
+  width:145px;
+  height:65px;
+  transform:translateX(-50%);
+  border:1px solid rgba(74,39,23,.09);
+  border-radius:50%;
+}
 
-.coffee-shine{
+.cup-logo{
+  position:absolute;
+  left:50%;
+  top:95px;
+  transform:translateX(-50%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:9px;
+  color:#3a2116;
+  text-align:center;
+}
+
+.cup-logo-mark{
+  width:68px;
+  height:68px;
+  display:grid;
+  place-items:center;
+  border:2px solid #3a2116;
+  border-radius:50%;
+  font:500 43px/1 "Playfair Display",serif;
+}
+
+.cup-logo-name{
+  font:700 9px/1.35 "DM Sans",sans-serif;
+  letter-spacing:2px;
+}
+
+.cup-bottom{
   position:absolute;
   left:50%;
   bottom:0;
-  width:60vw;
-  height:220px;
-  transform:translateX(-50%) translateY(calc(65% - var(--coffee-progress) * 35%));
-  background:radial-gradient(ellipse,rgba(255,225,184,.12),transparent 66%);
-  filter:blur(15px);
-  opacity:calc(var(--coffee-progress) * .8);
-  pointer-events:none;
+  width:160px;
+  height:14px;
+  transform:translateX(-50%);
+  border-radius:50%;
+  background:#e8e0d5;
 }
 
-/* The section immediately after the hero joins the espresso transition. */
+.cup-lid{
+  position:absolute;
+  z-index:4;
+  left:50%;
+  top:0;
+  width:215px;
+  height:58px;
+  transform:translateX(-50%);
+  border-radius:50% 50% 45% 45%;
+  background:linear-gradient(180deg,#5a5a55,#30302d);
+  box-shadow:0 7px 8px rgba(0,0,0,.18);
+}
+
+.cup-lid::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-7px;
+  width:190px;
+  height:16px;
+  transform:translateX(-50%);
+  border-radius:50%;
+  background:#363632;
+}
+
+.lid-slot{
+  position:absolute;
+  left:50%;
+  top:13px;
+  width:65px;
+  height:12px;
+  transform:translateX(-50%);
+  border-radius:50%;
+  background:#171714;
+  box-shadow:inset 0 2px 3px rgba(255,255,255,.08);
+}
+
+/* Coffee visibly pours from the lid as the user scrolls. */
+.coffee-stream{
+  position:absolute;
+  z-index:8;
+  left:58%;
+  top:49px;
+  width:44px;
+  height:260px;
+  transform-origin:top center;
+  transform:rotate(calc(-7deg - var(--coffee-progress) * 14deg))
+           scaleY(calc(.05 + var(--coffee-progress) * 1.2));
+  opacity:calc(var(--coffee-progress) * 1.2);
+}
+
+.coffee-stream::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  width:25px;
+  height:250px;
+  transform:translateX(-50%);
+  border-radius:50%;
+  background:linear-gradient(90deg,#3b1e11,#6a3820,#351a0e);
+  box-shadow:0 0 13px rgba(60,28,12,.18);
+}
+
+.stream-drop{
+  position:absolute;
+  width:17px;
+  height:26px;
+  border-radius:55% 55% 65% 65%;
+  background:#4a2717;
+}
+.stream-drop-1{left:-3px;top:125px}
+.stream-drop-2{right:-2px;top:185px}
+
+/* The actual liquid flood grows downward and covers the cream page. */
+.coffee-flood{
+  position:fixed;
+  z-index:10;
+  left:0;
+  top:0;
+  width:100%;
+  height:calc(var(--coffee-progress) * 115vh);
+  min-height:0;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(255,215,163,.10),transparent 25%),
+    linear-gradient(180deg,#56301c 0%,#3b2115 35%,#2b1810 100%);
+  transform:translateY(-100%);
+  border-radius:0 0 48% 52% / 0 0 3% 4%;
+  box-shadow:0 10px 35px rgba(35,15,7,.22);
+  will-change:height,transform,border-radius;
+  transition:height .08s linear;
+}
+
+.flood-wave{
+  position:absolute;
+  left:-5%;
+  top:calc(100% - 28px);
+  width:110%;
+  height:95px;
+  border-radius:50%;
+  background:#54301c;
+  box-shadow:0 -10px 22px rgba(255,211,160,.07);
+}
+
+.flood-drop{
+  position:absolute;
+  top:calc(100% - 5px);
+  display:block;
+  background:#432416;
+  border-radius:60% 60% 65% 65%;
+  opacity:.95;
+}
+.fd1{left:11%;width:18px;height:38px}
+.fd2{left:29%;width:12px;height:24px}
+.fd3{left:57%;width:22px;height:44px}
+.fd4{right:23%;width:13px;height:30px}
+.fd5{right:8%;width:20px;height:42px}
+
+/* Once the flood reaches the following section, keep the palette consistent. */
 .marquee{
   position:relative;
   z-index:9;
   background:var(--espresso);
   color:#efc56c;
-  border-top:1px solid rgba(255,255,255,.04);
-  transition:background .3s ease,color .3s ease;
 }
 
-/* Make the transition feel continuous instead of showing a hard seam. */
-.hero + .coffee-transition + .marquee{
-  margin-top:0;
+@media(max-width:850px){
+  .cup-scene{
+    width:205px;
+    height:330px;
+  }
+  .takeaway-cup{transform:translateX(-50%) scale(.84);transform-origin:top center}
+  .coffee-stream{left:57%}
+  .flood-wave{height:70px}
 }
-
 @media(max-width:850px){
   .coffee-blob{
     width:220%;
