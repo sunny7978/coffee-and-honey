@@ -32,3 +32,20 @@ const glow=document.querySelector(".cursor-glow");
 window.addEventListener("pointermove",e=>{
   glow.animate({left:`${e.clientX}px`,top:`${e.clientY}px`},{duration:500,fill:"forwards"});
 });
+
+
+// Coffee spill transition: the first scroll after the hero fills the page with espresso.
+const root = document.documentElement;
+const hero = document.querySelector(".hero");
+
+function updateCoffeeSpill(){
+  if(!hero) return;
+  const start = Math.max(0, hero.offsetTop + hero.offsetHeight - window.innerHeight * 0.9);
+  const distance = Math.max(520, window.innerHeight * 0.85);
+  const progress = Math.max(0, Math.min(1, (window.scrollY - start) / distance));
+  root.style.setProperty("--coffee-progress", progress.toFixed(3));
+}
+
+window.addEventListener("scroll", updateCoffeeSpill, {passive:true});
+window.addEventListener("resize", updateCoffeeSpill);
+updateCoffeeSpill();
